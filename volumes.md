@@ -61,10 +61,10 @@ CONTAINER ID   IMAGE                     COMMAND                  CREATED       
 
 `docker network inspect world-app`
 
+## Already exists network
 If network has been created just add `network` tag in our container like this:
 
 ```shell
-
 docker container run `
 -d `
 -p 3306:3306 `
@@ -75,13 +75,12 @@ docker container run `
 --env MARIADB_DATABASE=world-db `
 --volume world-db:/var/lib/mysql `
 --network world-app `
-mariadb:jammy
-  
+mariadb:jammy  
 ```
 
+</br>
 
 ```shell
-
 docker container run `
 --name phpmyadmin `
 -d `
@@ -89,5 +88,4 @@ docker container run `
 -p 8080:80 `
 --network world-app `
 phpmyadmin:5.2.0-apache
-
 ```
