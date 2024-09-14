@@ -1,0 +1,16 @@
+Magic of Bind Volume `-v "$(pwd)":/app`
+
+to execute comand shell `sh -c "yarn install && yarn start:dev"`
+
+```shell
+
+docker container run `
+  --name nest-app `
+  -w /app `
+  -p 3000:3000 `
+  -v ${PWD}:/app `
+  node:16-alpine3.16 `
+  sh -c "yarn install && yarn start:dev"
+
+
+```
