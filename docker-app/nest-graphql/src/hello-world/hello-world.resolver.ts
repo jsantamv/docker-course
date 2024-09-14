@@ -5,8 +5,7 @@ export class HelloWorldResolver {
 
     @Query( () => String, { description: 'Hola Mundo es lo que retorna', name: 'hello' } )
     helloWorld(): string {
-        const dfasd= 2/0;
-        return 'Hola Mundo - desde mi equipo test2';
+        return 'Hola Mundo - desde mi equipo test';
     }
 
     @Query( () => Float, { name: 'randomNumber' } )
