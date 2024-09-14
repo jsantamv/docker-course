@@ -14,3 +14,18 @@ docker container run `
 
 
 ```
+
+## On Linux WSL
+
+```bash
+
+docker container run \
+  --name nest-app \
+  -w /app \
+  -p 3000:3000 \
+  -v ${PWD}:/app \
+  node:16-alpine3.16 \
+  sh -c "yarn install && yarn start:dev"
+
+
+```
