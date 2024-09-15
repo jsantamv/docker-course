@@ -89,3 +89,19 @@ docker container run `
 --network world-app `
 phpmyadmin:5.2.0-apache
 ```
+
+
+-----------------------------------------------------------------------------------------
+
+```sh
+
+docker container run -d \
+--name sql-server-container \
+-e 'ACCEPT_EULA=Y' \
+-e 'SA_PASSWORD=Chirripo3820' \
+-p 1433:1433 \
+-v sql-server-data:/var/opt/mssql \
+mcr.microsoft.com/mssql/server:2022-latest
+
+```
+
