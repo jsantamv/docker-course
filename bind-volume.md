@@ -29,6 +29,4 @@ docker container run \
   -v ${PWD}:/app \
   node:16-alpine3.16 \
   sh -c "yarn install && yarn start:dev"
-
-
 ```
