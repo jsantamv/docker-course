@@ -5,7 +5,7 @@
 
 `docker container run -e MARIADB_RANDOM_ROOT_PASSWORD=yes -dp 3306:3306 mariadb`
 
-```powershel
+```sh
     docker run --name jsanta-mariadb `
   --env MARIADB_ROOT_PASSWORD=Chirripo3820 `
   --env MARIADB_PASSWORD=chirripo3820 `
