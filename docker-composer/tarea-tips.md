@@ -21,3 +21,13 @@ docker network create postgres-net
 docker network connect postgres-net 111
 docker network connect postgres-net 222
 docker network inspect postgres-net
+
+# Main CMD
+
+docker compose up
+docker compose down
+
+# pgadmin error user linux
+para cuadno pase el error
+
+`sudo chown -R 5050:5050 pgadmin`
