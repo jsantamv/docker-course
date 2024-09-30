@@ -1,5 +1,5 @@
 
-let times = 0;
+let times = 1;
 
 // cron.schedule('1-59 * * * * * *', () => {
 //     times++;
@@ -7,8 +7,8 @@ let times = 0;
 // });
 
 const syncDB = () => {
-    times++;
     console.log('tick cada multiplo de 5: ', times);
+    return times++;
 }
 
 
