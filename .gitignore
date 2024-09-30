@@ -1,1 +1,4 @@
 docker-composer/pgadmin/pgadmin4.db
+
+# ignore carpeta modules 
+node_modules
