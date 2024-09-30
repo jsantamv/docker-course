@@ -1,0 +1,9 @@
+# folders
+node_modules/
+
+# files
+Dockerfile
+package-lock.json
+
+.git
+.dockerignore
