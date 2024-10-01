@@ -26,3 +26,7 @@ para correr la imagen
 `docker container run -d jsantamv/cron-ticker:lilo`
 
 `docker exec -it cd7 /bin/sh `
+
+
+
+
