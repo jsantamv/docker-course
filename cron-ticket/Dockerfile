@@ -1,4 +1,7 @@
-FROM --platform=linux/arm64 node:19.2-alpine3.16
+
+# FROM --platform=linux/arm64 node:19.2-alpine3.16
+FROM --platform=$BUILDPLATFORM node:19.2-alpine3.16
+RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM" > /log
 
 # /work directory
 # cd app
