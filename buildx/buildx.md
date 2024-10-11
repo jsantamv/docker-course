@@ -4,6 +4,8 @@
 
 https://docs.docker.com/build/building/multi-platform/#simple-multi-platform-build-using-emulation
 
+https://github.com/Klerith/docker-basic-buildx/tree/fin-seccion-5
+
 
 `docker buildx create --name mybuilderJSA --driver docker-container --bootstrap`
 
