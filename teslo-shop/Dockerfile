@@ -1,8 +1,9 @@
 FROM node:19-alpine3.15 AS dev
 WORKDIR /app
 COPY package.json ./
-RUN yarn install --frozen-lockfile
+RUN yarn install
 CMD [ "yarn","start:dev" ]
+
 
 
 FROM node:19-alpine3.15 AS dev-deps
@@ -27,17 +28,16 @@ RUN yarn install --prod --frozen-lockfile
 FROM node:19-alpine3.15 AS prod
 EXPOSE 3000
 WORKDIR /app
-ENV APP_VERSION=${APP_VERSION}
+# Leer el argumento como ARG antes de establecerlo como ENV
+ARG APP_VERSION
+ENV APP_VERSION=$APP_VERSION
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 
 CMD [ "node","dist/main.js"]
 
 
+# PARA VERIFICAR LA VERSION DE LA IMAGEN
+#docker buildx build --platform linux/amd64,linux/arm64 --build-arg APP_VERSION=1.0.1 -t jsantamv/teslo-shop-backend:1.0.1 --push .
 
-
-
-
-
-
-
+# Lo anterior es para construir la imagen y subirla a docker hub

@@ -53,7 +53,6 @@ CMD ["node", "app.js"]
 #DOCKER HUB BUILDX. ESTO ES PARA CONSTRUIR IMAGENES MULTIPLATAFORMA
 #docker buildx build --platform linux/amd64 -t jsantamv/cron-ticker:chitara .
 #docker buildx build --platform linux/arm64 -t jsantamv/cron-ticker:chitara .
-#docker buildx build --platform linux/arm/v7 -t jsantamv/cron-ticker:chitara .
 
 #DOCKER HUB PUSH BUILDX MULTIPLATAFORMA 
 #docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t jsantamv/cron-ticker:chitara --push .
