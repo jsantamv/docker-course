@@ -2,7 +2,7 @@ FROM node:19-alpine3.15 AS dev
 WORKDIR /app
 COPY package.json ./
 RUN yarn install --frozen-lockfile
-CMD [ "yarn","start:dev" ] yarn start:dev
+CMD [ "yarn","start:dev" ]
 
 
 FROM node:19-alpine3.15 AS dev-deps
