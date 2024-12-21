@@ -7,3 +7,9 @@ package-lock.json
 
 .git
 .dockerignore
+.gitignore
+
+
+readme.md
+
+
