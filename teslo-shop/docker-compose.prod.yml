@@ -6,11 +6,7 @@ services:
       target: ${STAGE}
       dockerfile: Dockerfile
 
-    #command: yarn start:dev
-    volumes:
-      - .:/app:cached
-      - /app/node_modules
-
+    image: jsantamv/teslo-shop-backend:1.1.1
     container_name: nest-app
     ports:
       - ${PORT}:${PORT}
@@ -41,3 +37,9 @@ services:
 volumes:
   postgres-db:
     external: false
+
+#COMANDO PARA RODAR O DOCKER-COMPOSE PRODUTION
+#docker-compose -f docker-compose.prod.yml up
+
+# PARA EL BUILD
+#docker-compose -f docker-compose.prod.yml build
