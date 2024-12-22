@@ -52,3 +52,11 @@ http://localhost:3000/api/seed
 ## push
  EL COMANDO SIGUIENTE ES PARA HACER EL PARA LUEGO SUBIRLA AL DOCKER HUB
 `docker buildx build --platform linux/amd64,linux/arm64 -t jsantamv/teslo-shop-backend:1.0.2 --push .`
+
+# PUSH Docker 
+
+## SUBIR UNA IMAGEN O NUESTRA IMAGEN
+
+registry.digitalocean.com
+
+`docker buildx build --platform linux/amd64,linux/arm64 -t registry.digitalocean.com/cloud-selva-registry/teslo-shop-backend:1.2.2 --push .`
