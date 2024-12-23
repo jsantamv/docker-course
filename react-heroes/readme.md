@@ -16,3 +16,9 @@ luego necesitamos revisar el archivo de config de NGINX
 
 `/etc/nginx/conf.d`
 
+
+# Comandos para levantar la aplicacion
+
+`docker build -t heroes-app . --no-cache` no cache
+`docker build -t heroes-app . ` 
+`docker container run -p 80:80 heroes-app`

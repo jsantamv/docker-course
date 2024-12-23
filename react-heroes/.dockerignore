@@ -1,0 +1,27 @@
+# Ignorar archivos y directorios comunes de Node.js
+node_modules/
+npm-debug.log
+
+# Ignorar archivos de compilación de .NET
+bin/
+obj/
+
+# Ignorar archivos de configuración locales
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos temporales o de caché
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Ignorar carpetas del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de prueba
+test/
+tests/
