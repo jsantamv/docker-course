@@ -25,6 +25,13 @@ spec:
             secretKeyRef:
               name: postgres-secret
               key: DB_PASSWORD
+          resources:  # admin de recursos
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
