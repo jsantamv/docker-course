@@ -23,15 +23,8 @@ spec:
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: postgres-secret
+              name: postgres-secrets
               key: DB_PASSWORD
-          resources:  # admin de recursos
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
@@ -42,5 +35,6 @@ spec:
     app: postgres
   ports:
     - protocol: TCP
-      port: 5432 # este puede ser cualquier puerto, para que el mundo se pueda conectar
+      port: 5432 # cualquier puerto
       targetPort: 5432
+      
