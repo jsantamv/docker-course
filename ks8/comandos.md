@@ -6,6 +6,8 @@ para verificarlos
 
 para crearlos
 
+`kubectl apply -f file.yml`
+
 `kubectl apply -f postgres-config.yml`
 
 `kubectl apply -f postgres-secrets.yml`

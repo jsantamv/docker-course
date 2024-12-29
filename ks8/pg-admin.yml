@@ -23,15 +23,15 @@ spec:
         - name: PGADMIN_DEFAULT_EMAIL
           valueFrom:
             secretKeyRef:
-              name: pg-admin-secrets
+              name: pg-admin-secret
               key: PG_ADMIN_EMAIL
         - name: PGADMIN_DEFAULT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: pg-admin-secrets
+              name: pg-admin-secret
               key: DB_PASSWORD
         - name: PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION
-          value: "false"
+          value: "False"
         resources:  # Movido fuera de env
           requests:
             memory: "256Mi"
