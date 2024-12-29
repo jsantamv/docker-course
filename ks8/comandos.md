@@ -13,3 +13,8 @@ para crearlos
 `kubectl apply -f postgres-secrets.yml`
 
 `kubectl apply -f postgres.yml`
+
+para crear un tuner con el servicio de postgress
+
+`minikube service pg-admin-service`
+
